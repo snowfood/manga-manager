@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap');
+
+
+.App {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h1 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+.container-body {
+  margin-top: 2em;
+}
+
+/* MANGA TABLE */
+/* MANGA UPDATES */
+.mangaCard img{
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* NAV BAR */
+.nav-bar {
+  margin: 2em 0em 6em 0em;
+}
+
+.nav-button {
+  margin: 0.2em;
+}
+
+.nav-links {
+  display: inherit;
+
+}
