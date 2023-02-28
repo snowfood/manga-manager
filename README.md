@@ -1,0 +1,2 @@
+# manga-manager
+Manga Manager
