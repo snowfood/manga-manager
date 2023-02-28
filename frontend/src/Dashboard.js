@@ -29,44 +29,55 @@ function Dashboard({genres}) {
                 </div>
             </div>
             <div className="row">
-                <div className="col-sm-12 border">
+                <div className="col-sm-12 border pie-chart">
                     <p>Breakdown by Genre</p>
-                    <GenreChart genres={genres}/>
+                    <div className="pie-chart">
+                      <GenreChart genres={genres}/>
+                    </div>
+                    
                 </div>
             </div>
         </div>
       </Tab>
       <Tab eventKey="top-ten" title="Top 5 Mangas">
         <ListGroup>
-            <ListGroup.Item>1</ListGroup.Item>
-            <ListGroup.Item>2</ListGroup.Item>
-            <ListGroup.Item>3</ListGroup.Item>
-            <ListGroup.Item>4</ListGroup.Item>
-            <ListGroup.Item>5</ListGroup.Item>
+          <ListGroup.Item>
+              <div className="flex-container">
+                <div>1</div>
+                <div>
+                  <Button>↑</Button>
+                  <Button>↓</Button>
+                </div>
+              </div>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <div className="flex-container">
+                <div>2</div>
+                <div>
+                  <Button>↑</Button>
+                  <Button>↓</Button>
+                </div>
+              </div>
+            </ListGroup.Item>
+
         </ListGroup>
       </Tab>
       <Tab eventKey="bookmarked" title="Bookmarked">
-      <ListGroup>
+      <ListGroup >
             <ListGroup.Item>
-                1
-                <Button>Read Now</Button>
-                </ListGroup.Item>
+              <div className="flex-container">
+                <div>1</div>
+                <div><Button>Read Now</Button></div>
+              </div>
+            </ListGroup.Item>
             <ListGroup.Item>
-                2
-                <Button>Read Now</Button>
-                </ListGroup.Item>
-            <ListGroup.Item>
-                3
-                <Button>Read Now</Button>
-                </ListGroup.Item>
-            <ListGroup.Item>
-                4
-                <Button>Read Now</Button>
-                </ListGroup.Item>
-            <ListGroup.Item>
-                5
-                <Button>Read Now</Button>
-                </ListGroup.Item>
+              <div className="flex-container">
+                <div>2</div>
+                <div><Button>Read Now</Button></div>
+              </div>
+            </ListGroup.Item>
+
+
         </ListGroup>
       </Tab>
     </Tabs>

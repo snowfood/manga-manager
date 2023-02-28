@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './Dashboard';
 import axios from "axios";
 import { useEffect, useState } from 'react';
+import Image from 'react-bootstrap/Image'
 
 function App() {
   const [genres, setGenres] = useState([]);
@@ -35,6 +36,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Image className="footer-img" src="Footer.png"></Image>
     </div>
 
   );

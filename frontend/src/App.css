@@ -33,7 +33,30 @@ h1 {
   margin-top: 2em;
 }
 
+.btn-primary {
+  background-color: rgb(83, 126, 255) !important;
+  border-color: rgb(83, 126, 255) !important;
+}
+
+.nav-link {
+  color: rgb(36, 65, 154)!important;
+}
+
+/* MANGA DASHBOARD */
+.pie-chart {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* MANGA TABLE */
+.table {
+  padding-top: 2em;
+}
 /* MANGA UPDATES */
 .mangaCard img{
   max-height: 200px;
@@ -52,4 +75,13 @@ h1 {
 .nav-links {
   display: inherit;
 
+}
+
+.logo {
+  width: 400px;
+}
+
+/* FOOTER */
+.footer-img {
+  width: 100%;
 }

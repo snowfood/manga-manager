@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 
 function BasicTable() {
   return (
-        <div>
+        <div className="table">
             <h1>Currently Reading</h1>
             <Table striped bordered hover>
                 <thead>

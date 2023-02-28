@@ -13,7 +13,7 @@ export function GenreChart({genres}) {
     for (const genre of genres){
         genreNames.push(genre.name);
         genreCount.push(genre.count);
-        genreColour.push("hsl(" + (genre*3 * 360) + ", 50%, 50%)")
+        genreColour.push("hsl(" + Math.floor(Math.random() * 360) + ", 50%, 50%)")
     }
     
     console.log(genreNames);

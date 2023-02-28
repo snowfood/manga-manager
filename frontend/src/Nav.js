@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image'
 
 function BasicNav() {
   return (
@@ -9,7 +10,8 @@ function BasicNav() {
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
     >
       <Nav.Item>
-        <Nav.Link href="/home">Estelle's Manga Manager</Nav.Link>
+        <Image className="logo" src="naruto-logo.png"></Image>
+        {/* <Nav.Link href="/home">Estelle's Manga Manager</Nav.Link> */}
       </Nav.Item>
       <div className='nav-links'>
         <Nav.Item>
