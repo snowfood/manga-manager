@@ -16,7 +16,6 @@ export function GenreChart({genres}) {
         genreColour.push("hsl(" + Math.floor(Math.random() * 360) + ", 50%, 50%)")
     }
     
-    console.log(genreNames);
     const data = {
         labels: genreNames,
         datasets: [

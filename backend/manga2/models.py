@@ -19,11 +19,14 @@ class Manga(models.Model):
     name = models.CharField(max_length=120)
     author = models.CharField(max_length=120)
     genre = models.ManyToManyField(Genre)
-    total_chapters = models.IntegerField()
+    last_read_chapter = models.IntegerField()
     newest_chapter = models.IntegerField()
     rating = models.ManyToManyField(Rating)
     completed = models.BooleanField(default=False)
     currently_reading = models.BooleanField(default=False)
+    url = models.CharField(max_length=120)
+    img_url = models.CharField(max_length=120)
+    bookmarked = models.BooleanField(default=False)
 
     def _str_(self):
         return self.title

@@ -1,17 +1,40 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import axios from "axios";
 
-const Updates = () => {
+const Updates = ({mangas}) => {
+
+    const markAsRead = (manga) => {
+        axios.patch(`http://localhost:8000/api/mangas/${manga.id}/`, {
+            "last_read_chapter": manga.newest_chapter
+        })
+        .then(response => {
+            console.log(response);
+            window.location.reload(false);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+    };
     return ( 
        <div className='mangaCard'>
         <h1>New Updates</h1>
-        <Card style={{  }}>
-            <Card.Img variant="top" src="yona.jpg" />
-            <Card.Body>
-                <Card.Title>Akatsuki No Yona</Card.Title>
-                <Button variant="primary">Read chapter 29</Button>
-            </Card.Body>
-        </Card>
+        {mangas.map((manga)=>{
+            if (manga.newest_chapter >manga.last_read_chapter && manga.currently_reading){
+                return (
+                    <Card className='update-card'>
+                    <Card.Img variant="top" src={manga.img_url} />
+                    <Card.Body>
+                        <Card.Title>{manga.name}</Card.Title>
+                        <Button className="update-btn" target="_blank" href={manga.url}variant="primary">Read chapter {manga.last_read_chapter+1}</Button>
+                        <Button className="update-btn" onClick={()=>markAsRead(manga)}variant='secondary'>Mark As Read</Button>
+                    </Card.Body>
+                </Card>
+                )
+            }
+        })}
+       
 
        </div>
         

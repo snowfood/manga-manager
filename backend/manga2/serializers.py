@@ -4,7 +4,7 @@ from .models import Manga, Genre, Rating
 class MangaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Manga
-        fields = ('id', 'name', 'author','genre','total_chapters','newest_chapter','rating', 'completed', 'currently_reading')
+        fields = ('id', 'name', 'author','genre','last_read_chapter','newest_chapter','rating', 'completed', 'currently_reading', 'url', 'img_url','bookmarked')
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:

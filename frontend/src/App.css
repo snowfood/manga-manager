@@ -27,10 +27,12 @@
 h1 {
   font-size: 20px !important;
   font-weight: 700 !important;
+
 }
 
 .container-body {
-  margin-top: 2em;
+  padding: 2em 0em 0em 2em;
+
 }
 
 .btn-primary {
@@ -52,17 +54,29 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+.bookmark-btn {
+  margin: 0.2em !important;
+}
 
 /* MANGA TABLE */
 .table {
   padding-top: 2em;
 }
+.table-row td{
+  vertical-align: middle;
+}
 /* MANGA UPDATES */
 .mangaCard img{
-  max-height: 200px;
+  max-height: 250px;
   object-fit: cover;
 }
 
+.update-card{
+  margin: 1em 0em;
+}
+.update-btn {
+  margin: 0.2em;
+}
 /* NAV BAR */
 .nav-bar {
   margin: 2em 0em 6em 0em;
@@ -84,4 +98,7 @@ h1 {
 /* FOOTER */
 .footer-img {
   width: 100%;
+  object-fit: contain;
 }
+
+
